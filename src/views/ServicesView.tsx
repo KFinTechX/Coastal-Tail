@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, Scissors, Clock, Check, MessageCircle, Truck, HelpCircle } from 'lucide-react';
+import { Sparkles, Scissors, Clock, Check, Truck, HelpCircle } from 'lucide-react';
+import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import { useCart } from '../context/CartContext';
 import { GroomingSection } from '../components/GroomingSection';
 import { HowItWorksSection } from '../components/HowItWorksSection';
@@ -89,9 +90,10 @@ export const ServicesView: React.FC<ServicesViewProps> = () => {
           </p>
           <button
             onClick={() => openGroomingEnquiry()}
-            className="mt-4 px-6 py-2.5 rounded-xl bg-[#0D6E6E] hover:bg-[#08383B] text-white text-xs font-bold shadow-md transition-colors"
+            className="mt-4 px-6 py-2.5 rounded-xl bg-[#0D6E6E] hover:bg-[#08383B] text-white text-xs font-bold shadow-md transition-colors inline-flex items-center gap-2 cursor-pointer"
           >
-            Chat with Head Groomer on WhatsApp
+            <WhatsAppIcon className="w-4 h-4 text-[#2DD4BF]" />
+            <span>Chat with Head Groomer on WhatsApp</span>
           </button>
         </div>
       </section>

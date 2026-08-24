@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, Star, ShoppingBag, MessageCircle, Truck, ShieldCheck, Heart, CheckCircle, Package } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
+import { X, Star, ShoppingBag, Truck, ShieldCheck, Heart, CheckCircle, Package } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { formatINR, COASTAL_TAILS_PHONE, buildWhatsAppLink } from '../utils/whatsapp';
 
@@ -198,7 +199,7 @@ export const ProductDetailModal: React.FC = () => {
                 onClick={handleWhatsAppQuickEnquiry}
                 className="w-full py-2.5 rounded-xl border border-[#0D6E6E] text-[#0D6E6E] hover:bg-[#F0FDFB] font-bold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-600" />
+                <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
                 <span>Instant Enquire / Buy on WhatsApp</span>
               </button>
             </div>

@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import {
   Sparkles,
   ShoppingBag,
@@ -8,7 +9,6 @@ import {
   Search,
   Truck,
   Star,
-  MessageCircle,
   SlidersHorizontal,
   ChevronDown,
   ArrowRight,
@@ -553,7 +553,7 @@ export const ShopView: React.FC = () => {
                               className="py-2 px-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs border border-emerald-200 transition-all flex items-center justify-center gap-1 cursor-pointer"
                               title="Order instantly on WhatsApp"
                             >
-                              <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
+                              <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
                               <span>WhatsApp</span>
                             </button>
                           </div>
@@ -744,10 +744,10 @@ export const ShopView: React.FC = () => {
 
                             <button
                               onClick={() => handleQuickWhatsAppOrder(product)}
-                              className="py-2 px-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs border border-emerald-200 transition-all flex items-center justify-center gap-1 cursor-pointer"
+                              className="py-2 px-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold text-xs border border-emerald-200 transition-all flex items-center justify-center gap-1.5 cursor-pointer"
                               title="Order instantly on WhatsApp"
                             >
-                              <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
+                              <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
                               <span>WhatsApp</span>
                             </button>
                           </div>
@@ -790,7 +790,7 @@ export const ShopView: React.FC = () => {
 
             <div className="flex items-start gap-3.5">
               <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0">
-                <MessageCircle className="w-5 h-5 text-emerald-600" />
+                <WhatsAppIcon className="w-5 h-5 text-[#25D366]" />
               </div>
               <div>
                 <h4 className="text-sm font-bold text-[#08383B]">Instant WhatsApp Concierge</h4>

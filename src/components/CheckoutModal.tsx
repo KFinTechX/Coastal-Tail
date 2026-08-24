@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { X, ShoppingBag, Truck, MapPin, Phone, MessageCircle, AlertCircle, CheckCircle2 } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
+import { X, ShoppingBag, Truck, MapPin, Phone, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { ProductOrder } from '../types';
 import { createProductOrderUrl, formatINR, COASTAL_TAILS_PHONE } from '../utils/whatsapp';
@@ -260,9 +261,9 @@ export const CheckoutModal: React.FC = () => {
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full py-4 rounded-2xl bg-[#0D6E6E] hover:bg-[#08383B] text-white font-extrabold text-base shadow-lg shadow-[#0D6E6E]/25 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+              className="w-full py-4 rounded-2xl bg-[#0D6E6E] hover:bg-[#08383B] text-white font-extrabold text-base shadow-lg shadow-[#0D6E6E]/25 transition-all flex items-center justify-center gap-2.5 cursor-pointer active:scale-98"
             >
-              <MessageCircle className="w-5 h-5 text-[#2DD4BF]" />
+              <WhatsAppIcon className="w-5 h-5 text-[#2DD4BF]" />
               <span>Confirm Order on WhatsApp ({formatINR(grandTotal)})</span>
             </button>
             <p className="text-[11px] text-center text-slate-500 mt-2">

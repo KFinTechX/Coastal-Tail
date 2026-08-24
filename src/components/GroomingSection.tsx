@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Sparkles, Clock, Check, MessageCircle, HelpCircle, Shield, Truck, Scissors, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
+import { Sparkles, Clock, Check, HelpCircle, Shield, Truck, Scissors, ArrowRight } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { PetCategory, DogSize, CatCoatType, GroomingPackage } from '../types';
 import { DOG_SIZES, CAT_COATS, DOG_GROOMING_PACKAGES, CAT_GROOMING_PACKAGES, SPA_ADDONS, MOBILE_GROOMING_INFO } from '../data/groomingData';
@@ -184,7 +185,7 @@ export const GroomingSection: React.FC = () => {
                           : 'bg-white hover:bg-[#E6F7F6] text-[#08383B] border-2 border-[#0D6E6E]'
                       }`}
                     >
-                      <MessageCircle className="w-4 h-4 text-[#2DD4BF]" />
+                      <WhatsAppIcon className="w-4 h-4 text-[#2DD4BF]" />
                       <span>Ask for Price</span>
                     </button>
                   </div>
@@ -290,7 +291,7 @@ export const GroomingSection: React.FC = () => {
                           : 'bg-white hover:bg-[#E6F7F6] text-[#08383B] border-2 border-[#0D6E6E]'
                       }`}
                     >
-                      <MessageCircle className="w-4 h-4 text-[#2DD4BF]" />
+                      <WhatsAppIcon className="w-4 h-4 text-[#2DD4BF]" />
                       <span>Ask for Price</span>
                     </button>
                   </div>
@@ -335,9 +336,9 @@ export const GroomingSection: React.FC = () => {
                     <span className="text-xs font-extrabold text-[#08383B]">ASK FOR PRICE</span>
                     <button
                       onClick={() => openGroomingEnquiry()}
-                      className="px-3 py-1.5 rounded-xl bg-[#0D6E6E] hover:bg-[#08383B] text-white text-xs font-bold shadow-xs transition-colors flex items-center gap-1"
+                      className="px-3 py-1.5 rounded-xl bg-[#0D6E6E] hover:bg-[#08383B] text-white text-xs font-bold shadow-xs transition-colors flex items-center gap-1.5"
                     >
-                      <MessageCircle className="w-3.5 h-3.5" />
+                      <WhatsAppIcon className="w-3.5 h-3.5" />
                       <span>Enquire</span>
                     </button>
                   </div>
@@ -390,9 +391,9 @@ export const GroomingSection: React.FC = () => {
                 <div className="pt-4 flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={() => openGroomingEnquiry()}
-                    className="px-6 py-3.5 rounded-2xl bg-[#0D6E6E] hover:bg-[#08383B] text-white font-extrabold text-sm shadow-md flex items-center justify-center gap-2"
+                    className="px-6 py-3.5 rounded-2xl bg-[#0D6E6E] hover:bg-[#08383B] text-white font-extrabold text-sm shadow-md flex items-center justify-center gap-2.5"
                   >
-                    <MessageCircle className="w-4 h-4 text-[#2DD4BF]" />
+                    <WhatsAppIcon className="w-4 h-4 text-[#2DD4BF]" />
                     <span>Check Mobile Van Availability (Ask for Price)</span>
                   </button>
                 </div>

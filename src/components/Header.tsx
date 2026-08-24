@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 import {
   Phone,
   Clock,
@@ -9,7 +10,6 @@ import {
   Menu,
   X,
   Sparkles,
-  MessageCircle,
   Award,
   ShieldCheck,
 } from 'lucide-react';
@@ -197,9 +197,9 @@ export const Header: React.FC<HeaderProps> = ({ activePage, setActivePage, onOpe
             {/* Book on WhatsApp CTA */}
             <button
               onClick={() => openGroomingEnquiry()}
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#0D6E6E] hover:bg-[#08383B] text-white text-sm font-semibold shadow-md shadow-[#0D6E6E]/20 transition-all hover:scale-105 active:scale-95"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-[#0D6E6E] hover:bg-[#08383B] text-white text-sm font-semibold shadow-md shadow-[#0D6E6E]/20 transition-all hover:scale-105 active:scale-95 cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 text-[#2DD4BF]" />
+              <WhatsAppIcon className="w-4 h-4 text-[#2DD4BF]" />
               <span>Book on WhatsApp</span>
             </button>
 
@@ -299,9 +299,9 @@ export const Header: React.FC<HeaderProps> = ({ activePage, setActivePage, onOpe
                 openGroomingEnquiry();
                 setMobileMenuOpen(false);
               }}
-              className="w-full flex items-center justify-center gap-2 py-3 bg-[#0D6E6E] text-white rounded-xl text-sm font-bold shadow-md"
+              className="w-full flex items-center justify-center gap-2 py-3 bg-[#0D6E6E] text-white rounded-xl text-sm font-bold shadow-md cursor-pointer"
             >
-              <MessageCircle className="w-4 h-4 text-[#2DD4BF]" />
+              <WhatsAppIcon className="w-4 h-4 text-[#2DD4BF]" />
               <span>Book Appointment on WhatsApp</span>
             </button>
           </div>

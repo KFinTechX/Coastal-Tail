@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 import {
   MapPin,
   Phone,
@@ -6,7 +7,6 @@ import {
   Clock,
   Instagram,
   Facebook,
-  MessageCircle,
   Sparkles,
   Scissors,
   ShoppingBag,
@@ -99,10 +99,10 @@ export const Footer: React.FC<FooterProps> = ({ setActivePage }) => {
                 href={buildWhatsAppLink("Hello Coastal Tails! I would like to make an enquiry.")}
                 target="_blank"
                 rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-emerald-600 flex items-center justify-center text-slate-200 hover:text-white transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-[#25D366] flex items-center justify-center text-slate-200 hover:text-white transition-colors"
                 aria-label="WhatsApp"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 text-white" />
               </a>
             </div>
           </div>

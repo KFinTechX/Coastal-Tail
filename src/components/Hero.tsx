@@ -1,4 +1,6 @@
 import React from 'react';
+import heroPetSpaImg from '../assets/images/hero_pets_spa_1787567015212.jpg';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 import {
   Sparkles,
   ChevronRight,
@@ -6,7 +8,6 @@ import {
   Scissors,
   CheckCircle2,
   Phone,
-  MessageCircle,
   Clock,
   ShieldCheck,
   Award,
@@ -44,33 +45,93 @@ export const Hero: React.FC<HeroProps> = ({ onExploreGrooming, onShopEssentials 
         </svg>
       </div>
 
-      {/* Decorative Floating Paw Prints */}
-      <div className="absolute top-20 left-12 sm:left-24 opacity-20 pointer-events-none select-none">
-        <svg width="34" height="34" viewBox="0 0 24 24" fill="#0D6E6E">
-          <circle cx="5" cy="8" r="2" />
-          <circle cx="10" cy="4" r="2" />
-          <circle cx="15" cy="4" r="2" />
-          <circle cx="20" cy="8" r="2" />
-          <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
-        </svg>
-      </div>
-      <div className="absolute top-36 left-1/3 opacity-15 pointer-events-none select-none">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="#0D6E6E">
-          <circle cx="5" cy="8" r="2" />
-          <circle cx="10" cy="4" r="2" />
-          <circle cx="15" cy="4" r="2" />
-          <circle cx="20" cy="8" r="2" />
-          <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
-        </svg>
-      </div>
-      <div className="absolute top-16 right-1/4 opacity-20 pointer-events-none select-none">
-        <svg width="38" height="38" viewBox="0 0 24 24" fill="#0D6E6E">
-          <circle cx="5" cy="8" r="2" />
-          <circle cx="10" cy="4" r="2" />
-          <circle cx="15" cy="4" r="2" />
-          <circle cx="20" cy="8" r="2" />
-          <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
-        </svg>
+      {/* Moving Watermarked Paw Prints Background Layer */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
+        {/* Top-Right Signature Paw Track Cluster (Exact match to reference) */}
+        <div className="absolute top-4 sm:top-8 right-8 sm:right-28 animate-drift-paw-track">
+          <div className="flex items-center gap-3">
+            <svg width="44" height="44" viewBox="0 0 24 24" fill="#0D6E6E" className="opacity-25 transform rotate-12">
+              <circle cx="5" cy="8" r="2" />
+              <circle cx="10" cy="4" r="2" />
+              <circle cx="15" cy="4" r="2" />
+              <circle cx="20" cy="8" r="2" />
+              <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
+            </svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#0D6E6E" className="opacity-20 transform -rotate-12 translate-y-3">
+              <circle cx="5" cy="8" r="2" />
+              <circle cx="10" cy="4" r="2" />
+              <circle cx="15" cy="4" r="2" />
+              <circle cx="20" cy="8" r="2" />
+              <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
+            </svg>
+          </div>
+        </div>
+
+        {/* Top-Left Floating Watermark Paw */}
+        <div className="absolute top-16 left-8 sm:left-20 animate-float-paw-1">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="#0D6E6E" className="opacity-20 transform -rotate-15">
+            <circle cx="5" cy="8" r="2" />
+            <circle cx="10" cy="4" r="2" />
+            <circle cx="15" cy="4" r="2" />
+            <circle cx="20" cy="8" r="2" />
+            <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
+          </svg>
+        </div>
+
+        {/* Mid-Left Watermark Paw */}
+        <div className="absolute top-44 left-4 sm:left-12 animate-float-paw-2">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0D6E6E" className="opacity-15 transform rotate-25">
+            <circle cx="5" cy="8" r="2" />
+            <circle cx="10" cy="4" r="2" />
+            <circle cx="15" cy="4" r="2" />
+            <circle cx="20" cy="8" r="2" />
+            <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
+          </svg>
+        </div>
+
+        {/* Center-Top Gentle Floating Paw */}
+        <div className="absolute top-8 left-1/3 animate-float-paw-3">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="#0D6E6E" className="opacity-15 transform rotate-10">
+            <circle cx="5" cy="8" r="2" />
+            <circle cx="10" cy="4" r="2" />
+            <circle cx="15" cy="4" r="2" />
+            <circle cx="20" cy="8" r="2" />
+            <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
+          </svg>
+        </div>
+
+        {/* Center-Right Floating Watermark Paw */}
+        <div className="absolute top-36 right-1/3 animate-float-paw-1">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="#0D6E6E" className="opacity-20 transform -rotate-20">
+            <circle cx="5" cy="8" r="2" />
+            <circle cx="10" cy="4" r="2" />
+            <circle cx="15" cy="4" r="2" />
+            <circle cx="20" cy="8" r="2" />
+            <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
+          </svg>
+        </div>
+
+        {/* Lower Right Drifting Paw */}
+        <div className="absolute bottom-16 right-12 sm:right-24 animate-float-paw-2">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="#0D6E6E" className="opacity-15 transform rotate-45">
+            <circle cx="5" cy="8" r="2" />
+            <circle cx="10" cy="4" r="2" />
+            <circle cx="15" cy="4" r="2" />
+            <circle cx="20" cy="8" r="2" />
+            <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
+          </svg>
+        </div>
+
+        {/* Bottom Left Subtle Pulsing Paw */}
+        <div className="absolute bottom-10 left-1/4 animate-pulse-paw">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="#0D6E6E" className="opacity-15 transform rotate-6">
+            <circle cx="5" cy="8" r="2" />
+            <circle cx="10" cy="4" r="2" />
+            <circle cx="15" cy="4" r="2" />
+            <circle cx="20" cy="8" r="2" />
+            <path d="M6 14 C6 11, 8 10, 12 10 C16 10, 18 11, 18 14 C18 17.5, 15 20, 12 20 C9 20, 6 17.5, 6 14 Z" />
+          </svg>
+        </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -78,12 +139,14 @@ export const Hero: React.FC<HeroProps> = ({ onExploreGrooming, onShopEssentials 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-2 sm:pt-4">
           {/* Left Column: Eyebrow + Main Title + Subtitle */}
           <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
-            {/* Eyebrow badge matching user reference with orange play icon */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 border border-[#2DD4BF]/50 shadow-xs text-xs font-extrabold text-[#08383B] tracking-wider uppercase backdrop-blur-xs">
-              <span className="w-4 h-4 rounded-full bg-[#FF8A3D] text-white flex items-center justify-center text-[9px] font-black shrink-0">
-                ▶
+            {/* Eyebrow badge matching user reference with crisp orange play icon */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#2DD4BF]/50 shadow-xs text-xs font-extrabold text-[#08383B] tracking-wider uppercase backdrop-blur-xs">
+              <span className="w-4 h-4 rounded-full bg-gradient-to-tr from-[#FF7A29] to-[#FF944D] text-white flex items-center justify-center shadow-xs shrink-0 p-0.5">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-2.5 h-2.5 ml-0.5">
+                  <path d="M7 4.5v15a1 1 0 001.55.83l12-7.5a1 1 0 000-1.66l-12-7.5A1 1 0 007 4.5z" />
+                </svg>
               </span>
-              <span className="text-[#0D6E6E]">TRANSPARENT GROOMING RATES</span>
+              <span className="text-[#0D6E6E] font-bold">TRANSPARENT GROOMING RATES</span>
             </div>
 
             {/* Bold Headline */}
@@ -112,10 +175,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreGrooming, onShopEssentials 
 
               <button
                 onClick={() => openGroomingEnquiry()}
-                className="px-5 py-3 rounded-2xl bg-white hover:bg-[#F0FDFB] text-[#08383B] font-bold text-xs sm:text-sm border border-slate-200 shadow-xs transition-all flex items-center gap-2 cursor-pointer hover:border-[#0D6E6E]"
+                className="px-5 py-3 rounded-2xl bg-white hover:bg-[#F0FDFB] text-[#08383B] font-bold text-xs sm:text-sm border border-slate-200 shadow-xs transition-all flex items-center gap-2.5 cursor-pointer hover:border-[#25D366] hover:text-[#0D6E6E] group"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-600" />
-                <span>Ask for Price on WhatsApp</span>
+                <WhatsAppIcon variant="badge" className="w-5 h-5 shadow-xs" />
+                <span className="font-bold">Ask for Price on WhatsApp</span>
               </button>
             </div>
 
@@ -126,58 +189,19 @@ export const Hero: React.FC<HeroProps> = ({ onExploreGrooming, onShopEssentials 
             </div>
           </div>
 
-          {/* Right Column: Dog in teal towel & Fluffy Cat Visual (Exact match to reference) */}
+          {/* Right Column: Natural Dog and Cat Visual with Organic Wave Arch (Matching 3rd reference layout) */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md">
-              {/* Main Photo Card with soft wave shape */}
-              <div className="relative rounded-3xl overflow-hidden bg-gradient-to-tr from-[#08383B]/10 to-[#2DD4BF]/20 p-2 sm:p-2.5 backdrop-blur-xs">
-                <div className="relative rounded-2xl overflow-hidden bg-white shadow-xl aspect-4/3 sm:aspect-16/11">
-                  <img
-                    src="https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=900&auto=format&fit=crop&q=85"
-                    alt="Golden Retriever in cozy teal grooming towel and fluffy cat companion"
-                    className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                  />
+            <div className="relative w-full max-w-lg">
+              {/* Organic Soft Teal Backdrop Curve matching reference */}
+              <div className="absolute -inset-4 sm:-inset-6 bg-[#CBEFEB]/60 rounded-[3rem] blur-xl pointer-events-none -z-10" />
 
-                  {/* Soft coastal gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#08383B]/75 via-transparent to-transparent" />
-
-                  {/* Bottom Image Overlay Pill */}
-                  <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-md rounded-xl p-2.5 border border-white/40 shadow-md flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-[#E6F7F6] text-[#0D6E6E] flex items-center justify-center text-sm font-bold">
-                        🐶🐱
-                      </div>
-                      <div>
-                        <div className="text-xs font-extrabold text-[#08383B]">Mangaluru Pet Sanctuary</div>
-                        <div className="text-[10px] text-slate-500">Kankanady Studio & Mobile Van</div>
-                      </div>
-                    </div>
-
-                    <button
-                      onClick={() => openGroomingEnquiry()}
-                      className="px-2.5 py-1 bg-[#0D6E6E] hover:bg-[#08383B] text-white text-[10px] font-extrabold rounded-lg transition-colors cursor-pointer"
-                    >
-                      Enquire
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Star Rating Tag */}
-              <div className="absolute -top-3 -left-3 sm:-left-5 bg-white rounded-2xl p-2.5 shadow-lg border border-slate-100 flex items-center gap-2">
-                <div className="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-black text-xs">
-                  ★ 4.9
-                </div>
-                <div>
-                  <div className="text-[11px] font-extrabold text-slate-800">500+ Mangaluru Pets</div>
-                  <div className="text-[9px] text-slate-500">Certified gentle stylists</div>
-                </div>
-              </div>
-
-              {/* Floating Botanical Badge */}
-              <div className="absolute -bottom-3 -right-2 sm:-right-4 bg-gradient-to-r from-[#0D6E6E] to-[#08383B] text-white rounded-2xl p-2.5 shadow-xl border border-white/20 flex items-center gap-2">
-                <Sparkles className="w-3.5 h-3.5 text-[#2DD4BF]" />
-                <span className="text-[10px] font-bold">100% Tearless Botanical Spa</span>
+              {/* Natural Organic Shaped Container for Pets Visual */}
+              <div className="relative overflow-hidden rounded-[2.5rem] sm:rounded-[3rem] shadow-xl border-4 border-white/80 bg-[#CBEFEB]/40 transition-transform duration-700 hover:scale-[1.02]">
+                <img
+                  src={heroPetSpaImg}
+                  alt="Golden Retriever in teal grooming bandana and fluffy Ragdoll cat with teal bowtie"
+                  className="w-full h-auto object-cover object-center max-h-[380px] sm:max-h-[440px]"
+                />
               </div>
             </div>
           </div>

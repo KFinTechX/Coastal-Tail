@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { CartProvider } from './context/CartContext';
 import { ActivePage } from './types';
+import { PawWatermarkBackground } from './components/PawWatermarkBackground';
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { GroomingSection } from './components/GroomingSection';
@@ -53,7 +54,10 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-[#2DD4BF]/30 font-['Plus_Jakarta_Sans',sans-serif]">
+    <div className="min-h-screen flex flex-col bg-[#F8FDFA] text-slate-900 selection:bg-[#2DD4BF]/30 font-['Plus_Jakarta_Sans',sans-serif] relative">
+      {/* Floating Paw Watermark Background across whole website */}
+      <PawWatermarkBackground />
+
       {/* Navigation Header */}
       <Header
         activePage={activePage}
@@ -62,7 +66,7 @@ function AppContent() {
       />
 
       {/* Main Content Pages */}
-      <main className="flex-1">
+      <main className="flex-1 relative z-10">
         {activePage === 'home' && (
           <>
             <Hero

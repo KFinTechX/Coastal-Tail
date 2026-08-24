@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { X, MessageCircle, Sparkles, ShieldCheck, Check, Calendar, Clock, MapPin, AlertCircle } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
+import { X, Sparkles, ShieldCheck, Check, Calendar, Clock, MapPin, AlertCircle } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { GroomingEnquiry, GroomingPackage } from '../types';
 import { DOG_SIZES, CAT_COATS, SPA_ADDONS, DOG_GROOMING_PACKAGES, CAT_GROOMING_PACKAGES } from '../data/groomingData';
@@ -421,9 +422,9 @@ export const GroomingEnquiryModal: React.FC = () => {
           <div className="pt-3">
             <button
               type="submit"
-              className="w-full py-4 rounded-2xl bg-[#0D6E6E] hover:bg-[#08383B] text-white font-extrabold text-base shadow-lg shadow-[#0D6E6E]/25 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-98"
+              className="w-full py-4 rounded-2xl bg-[#0D6E6E] hover:bg-[#08383B] text-white font-extrabold text-base shadow-lg shadow-[#0D6E6E]/25 transition-all flex items-center justify-center gap-2.5 cursor-pointer active:scale-98"
             >
-              <MessageCircle className="w-5 h-5 text-[#2DD4BF]" />
+              <WhatsAppIcon className="w-5 h-5 text-[#2DD4BF]" />
               <span>Send Grooming Enquiry on WhatsApp</span>
             </button>
             <p className="text-[11px] text-center text-slate-500 mt-2">

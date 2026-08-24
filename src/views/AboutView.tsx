@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShieldCheck, Heart, Sparkles, Award, CheckCircle2, Scissors, Truck, MapPin } from 'lucide-react';
+import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import { useCart } from '../context/CartContext';
 import { COASTAL_TAILS_ADDRESS, COASTAL_TAILS_HOURS, COASTAL_TAILS_PHONE } from '../utils/whatsapp';
 
@@ -164,9 +165,10 @@ export const AboutView: React.FC = () => {
           <div className="pt-2">
             <button
               onClick={() => openGroomingEnquiry()}
-              className="px-8 py-3.5 rounded-2xl bg-white text-[#08383B] hover:bg-[#E6F7F6] font-extrabold text-sm shadow-lg transition-transform hover:scale-105"
+              className="px-8 py-3.5 rounded-2xl bg-white text-[#08383B] hover:bg-[#E6F7F6] font-extrabold text-sm shadow-lg transition-transform hover:scale-105 inline-flex items-center gap-2 cursor-pointer"
             >
-              Ask for Grooming Price on WhatsApp
+              <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
+              <span>Ask for Grooming Price on WhatsApp</span>
             </button>
           </div>
         </div>

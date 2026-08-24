@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 import { createDirectWhatsAppChatUrl } from '../utils/whatsapp';
 
 export const FloatingWhatsApp: React.FC = () => {
@@ -20,7 +21,7 @@ export const FloatingWhatsApp: React.FC = () => {
               e.stopPropagation();
               setShowTooltip(false);
             }}
-            className="text-slate-400 hover:text-slate-600 p-0.5"
+            className="text-slate-400 hover:text-slate-600 p-0.5 cursor-pointer"
             aria-label="Close"
           >
             <X className="w-3 h-3" />
@@ -28,16 +29,17 @@ export const FloatingWhatsApp: React.FC = () => {
         </div>
       )}
 
-      {/* Floating Button */}
+      {/* Floating Button with authentic WhatsApp Icon */}
       <button
         onClick={handleWhatsAppClick}
         className="w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-xl shadow-[#25D366]/40 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer relative"
         aria-label="Chat on WhatsApp"
         title="Chat with Coastal Tails on WhatsApp"
       >
-        <span className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 rounded-full animate-ping" />
-        <MessageCircle className="w-7 h-7 fill-current" />
+        <span className="absolute -top-1 -right-1 w-3.5 h-3.5 bg-white border-2 border-[#25D366] rounded-full animate-ping" />
+        <WhatsAppIcon className="w-8 h-8 text-white fill-current" />
       </button>
     </div>
   );
 };
+

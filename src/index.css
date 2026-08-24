@@ -40,3 +40,81 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* Moving Paw Print Watermark Animations */
+@keyframes float-paw-1 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-18px) translateX(12px) rotate(8deg) scale(1.06);
+  }
+}
+
+@keyframes float-paw-2 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+  }
+  50% {
+    transform: translateY(-24px) translateX(-14px) rotate(-10deg) scale(1.08);
+  }
+}
+
+@keyframes float-paw-3 {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-14px) translateX(10px) rotate(6deg);
+  }
+  66% {
+    transform: translateY(-8px) translateX(-8px) rotate(-4deg);
+  }
+}
+
+@keyframes drift-paw-track {
+  0% {
+    transform: translateY(0) translateX(0) rotate(15deg);
+    opacity: 0.15;
+  }
+  50% {
+    transform: translateY(-16px) translateX(14px) rotate(22deg);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(15deg);
+    opacity: 0.15;
+  }
+}
+
+@keyframes pulse-paw-watermark {
+  0%, 100% {
+    opacity: 0.18;
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.12) rotate(12deg);
+  }
+}
+
+.animate-float-paw-1 {
+  animation: float-paw-1 7s ease-in-out infinite;
+}
+
+.animate-float-paw-2 {
+  animation: float-paw-2 9s ease-in-out infinite;
+}
+
+.animate-float-paw-3 {
+  animation: float-paw-3 11s ease-in-out infinite;
+}
+
+.animate-drift-paw-track {
+  animation: drift-paw-track 8s ease-in-out infinite;
+}
+
+.animate-pulse-paw {
+  animation: pulse-paw-watermark 6s ease-in-out infinite;
+}
+

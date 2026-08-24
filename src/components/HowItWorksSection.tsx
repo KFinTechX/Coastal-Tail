@@ -1,5 +1,6 @@
 import React from 'react';
 import { MessageSquare, Scissors, Sparkles, Heart, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 import { useCart } from '../context/CartContext';
 
 export const HowItWorksSection: React.FC = () => {
@@ -98,8 +99,9 @@ export const HowItWorksSection: React.FC = () => {
           </div>
           <button
             onClick={() => openGroomingEnquiry()}
-            className="px-6 py-3.5 rounded-2xl bg-white text-[#08383B] hover:bg-[#E6F7F6] font-extrabold text-sm shadow-md transition-all shrink-0 flex items-center gap-2 cursor-pointer"
+            className="px-6 py-3.5 rounded-2xl bg-white text-[#08383B] hover:bg-[#E6F7F6] font-extrabold text-sm shadow-md transition-all shrink-0 flex items-center gap-2.5 cursor-pointer hover:scale-102"
           >
+            <WhatsAppIcon className="w-4 h-4 text-[#25D366]" />
             <span>Book on WhatsApp Now</span>
             <ArrowRight className="w-4 h-4 text-[#0D6E6E]" />
           </button>

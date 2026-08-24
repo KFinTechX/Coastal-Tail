@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import {
   MapPin,
   Phone,
   Mail,
   Clock,
-  MessageCircle,
   Sparkles,
   Send,
   CheckCircle2,
@@ -86,8 +86,8 @@ Looking forward to your guidance!`;
 
           {/* WhatsApp Support */}
           <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-sm space-y-3">
-            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center font-bold">
-              <MessageCircle className="w-6 h-6" />
+            <div className="w-12 h-12 rounded-2xl bg-emerald-50 text-[#25D366] flex items-center justify-center font-bold">
+              <WhatsAppIcon className="w-6 h-6" />
             </div>
             <h3 className="text-base font-bold text-[#08383B]">WhatsApp Concierge</h3>
             <p className="text-xs text-slate-600 leading-relaxed">
@@ -231,9 +231,9 @@ Looking forward to your guidance!`;
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-2xl bg-[#0D6E6E] hover:bg-[#08383B] text-white font-bold text-sm shadow-md flex items-center justify-center gap-2 cursor-pointer transition-all active:scale-98"
+                className="w-full py-3.5 rounded-2xl bg-[#0D6E6E] hover:bg-[#08383B] text-white font-bold text-sm shadow-md flex items-center justify-center gap-2.5 cursor-pointer transition-all active:scale-98"
               >
-                <Send className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4 text-[#2DD4BF]" />
                 <span>Send Enquiry on WhatsApp</span>
               </button>
             </form>
