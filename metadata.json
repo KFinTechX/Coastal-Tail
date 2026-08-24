@@ -1,0 +1,6 @@
+{
+  "name": "COASTAL TAILS – Grooming Studio & Pet Spa",
+  "description": "Premier pet grooming studio, luxury spa, and curated pet food & accessories store in Mangaluru, Karnataka.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

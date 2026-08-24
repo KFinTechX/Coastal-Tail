@@ -1,0 +1,140 @@
+import React, { useState } from 'react';
+import { CartProvider } from './context/CartContext';
+import { ActivePage } from './types';
+import { Header } from './components/Header';
+import { Hero } from './components/Hero';
+import { GroomingSection } from './components/GroomingSection';
+import { HowItWorksSection } from './components/HowItWorksSection';
+import { FoodShopSection } from './components/FoodShopSection';
+import { AccessoriesShopSection } from './components/AccessoriesShopSection';
+import { MembershipSection } from './components/MembershipSection';
+import { TestimonialsSection } from './components/TestimonialsSection';
+import { Footer } from './components/Footer';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
+import { GroomingEnquiryModal } from './components/GroomingEnquiryModal';
+import { CheckoutModal } from './components/CheckoutModal';
+import { ProductDetailModal } from './components/ProductDetailModal';
+import { CartDrawer } from './components/CartDrawer';
+import { SearchModal } from './components/SearchModal';
+import { ToastNotification } from './components/ToastNotification';
+
+// Dedicated Views
+import { AboutView } from './views/AboutView';
+import { ServicesView } from './views/ServicesView';
+import { ShopView } from './views/ShopView';
+import { MembershipView } from './views/MembershipView';
+import { ContactView } from './views/ContactView';
+
+function AppContent() {
+  const [activePage, setActivePage] = useState<ActivePage>('home');
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const handlePageChange = (page: ActivePage) => {
+    setActivePage(page);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleExploreGrooming = () => {
+    const el = document.getElementById('grooming-packages');
+    if (el && activePage === 'home') {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      handlePageChange('services');
+    }
+  };
+
+  const handleShopEssentials = () => {
+    const el = document.getElementById('pet-food-section');
+    if (el && activePage === 'home') {
+      el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      handlePageChange('shop');
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex flex-col bg-white text-slate-900 selection:bg-[#2DD4BF]/30 font-['Plus_Jakarta_Sans',sans-serif]">
+      {/* Navigation Header */}
+      <Header
+        activePage={activePage}
+        setActivePage={handlePageChange}
+        onOpenSearch={() => setIsSearchOpen(true)}
+      />
+
+      {/* Main Content Pages */}
+      <main className="flex-1">
+        {activePage === 'home' && (
+          <>
+            <Hero
+              onExploreGrooming={handleExploreGrooming}
+              onShopEssentials={handleShopEssentials}
+            />
+            <GroomingSection />
+            <HowItWorksSection />
+            <FoodShopSection
+              onExploreFullStore={() => handlePageChange('shop')}
+            />
+            <AccessoriesShopSection
+              onExploreFullStore={() => handlePageChange('shop')}
+            />
+            <MembershipSection />
+            <TestimonialsSection />
+          </>
+        )}
+
+        {activePage === 'about' && <AboutView />}
+
+        {(activePage === 'services' ||
+          activePage === 'dog-grooming' ||
+          activePage === 'cat-grooming' ||
+          activePage === 'spa-addons' ||
+          activePage === 'mobile-grooming') && (
+          <ServicesView
+            initialTab={
+              activePage === 'cat-grooming'
+                ? 'cats'
+                : activePage === 'spa-addons'
+                ? 'spa'
+                : activePage === 'mobile-grooming'
+                ? 'mobile'
+                : 'dogs'
+            }
+          />
+        )}
+
+        {(activePage === 'shop' || activePage === 'food' || activePage === 'accessories') && (
+          <ShopView />
+        )}
+
+        {activePage === 'membership' && <MembershipView />}
+
+        {activePage === 'contact' && <ContactView />}
+      </main>
+
+      {/* Ocean Teal Footer */}
+      <Footer setActivePage={handlePageChange} />
+
+      {/* Floating Action Button */}
+      <FloatingWhatsApp />
+
+      {/* Global Modals & Drawers */}
+      <GroomingEnquiryModal />
+      <CheckoutModal />
+      <ProductDetailModal />
+      <CartDrawer />
+      <SearchModal
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+      />
+      <ToastNotification />
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <CartProvider>
+      <AppContent />
+    </CartProvider>
+  );
+}
